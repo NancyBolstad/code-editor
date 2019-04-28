@@ -1,4 +1,4 @@
-export function destructuring(){
+export function destructuring() {
   // const feast = {    //the object we will destructure
   //   appetizer: 'Spring Rolls',
   //   entree: 'Enchiladas',
@@ -14,6 +14,7 @@ export function destructuring(){
   //   dessert     //of keys to create into stand alone variables
   // } = feast    //we also specify the object we're destructuring
   //
+  //Rather than: console.log(feast.appetizer, feast.dessert)
   // console.log('appetizer = ', appetizer)
   // //appetizer = 'Spring Rolls'
   // console.log('dessert = ', dessert)
@@ -37,5 +38,4 @@ export function destructuring(){
   // //horsdoeuvre[0]
   // console.log(crabCake)         //"crab cakes"
   // console.log(grossFishEggs)    //"caviar"
-
 }
