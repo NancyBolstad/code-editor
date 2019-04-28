@@ -58,13 +58,47 @@ class App extends Component {
     });
   };
 
+  rules = () => {
+    let { rules } = this.state;
+    let array = [];
+    let fields = ['name', 'begin', 'end'];
+    for (let i = 0; i < rules; i++) {
+      array.push(
+        <Row key={i}>
+          <Column>
+            {fields.map((field, index) => {
+              return (
+                <Column key={index}>
+                  <RuleLabel>{field}</RuleLabel>
+                  <RuleInput
+                    value={this.state[`${field}${i}`]}
+                    onChange={this.handleChange}
+                    name={`${field}${i}`}
+                  />
+                </Column>
+              );
+            })}
+          </Column>
+          <StyleInput
+            value={this.state[`style${i}`]}
+            onChange={this.handleChange}
+            name={`style${i}`}
+          />
+        </Row>
+      );
+    }
+
+    return array;
+  };
+
   render() {
     let { value } = this.state;
-    let { handleChange, newFields } = this;
+    let { handleChange, newFields, rules } = this;
 
     return (
       <Container>
         <Column>
+          {rules()}
           <Button onClick={newFields}>New Rule</Button>
         </Column>
         <Column>
