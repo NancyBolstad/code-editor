@@ -1,3 +1,9 @@
+import MyComponent from './exporting'
+
+
+
+
+
 //
 // import SomeRandomThing from './exporting.js'
 //

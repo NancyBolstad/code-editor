@@ -1,3 +1,14 @@
+export default class MyComponent{
+    
+}
+
+
+
+
+
+
+
+
 //
 // export default class WhatIWant {
 //
